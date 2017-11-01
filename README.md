@@ -7,7 +7,7 @@ Instructions can be found on the aforementioned link.
 The strict R script can run potentially unlimited vibriocidal plates/.csvs in one folder.
 
 These programs were developed by Evan Offord and Raquel Becker, employees of Massachusetts General Hospital, Jackson 520, PI Dr. Jason B. Harris.
-It implements a novel vibriocidal standardization method, intended to reduce vibriocidal variance. Publication Pending.
+They implement a novel vibriocidal standardization method, intended to reduce vibriocidal variance. Publication Pending.
 The source code is written in R-Project/HTML, implementing the CRAN packages rconnect, shiny, and nplr. 
 All standardized values are given in logarithmic base 2.  If you have any questions or concerns, please email EOFFORD@partners.org
 rlbecker@partners.org, or call 617-724-7529.
