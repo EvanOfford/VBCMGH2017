@@ -79,15 +79,6 @@ Inter assay variation: Titer of batch pulled sera with batch of guinea pig compl
 Intra assay variation: Should be similar in duplicate rows. Maximum variation is 2-fold.
 
 
-For the statistical analysis to work correctly, please follow the plate set-up listed below (on a standard 96-well plate)
-
-Growth Control/Sample 1 (1:10)/ -> 1:2 dilution to 1:10240
-Growth Control/Sample 1 (1:10)/ -> 1:2 dilution to 1:10240
-Growth Control/Sample 2 (1:10)/ -> 1:2 dilution to 1:10240
-Growth Control/Sample 2 (1:10)/ -> 1:2 dilution to 1:10240
-Saline Control/Sample 3 (1:10)/ -> 1:2 dilution to 1:10240
-Saline Control/Sample 3 (1:10)/ -> 1:2 dilution to 1:10240
-Saline Control/mAb (ng/mL)/1:2 dilution to well 12G
-Saline Control/mAb (ng/mL)/1:2 dilution to well 12H
+For the statistical analysis to work correctly, please follow the plate set-up linked in the repository (on a standard 96-well plate).
 
 
