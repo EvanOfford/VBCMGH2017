@@ -1,11 +1,13 @@
 library(rsconnect)
 library(shiny)
 library(nplr)#this package is for running N-parameter logistic regression analysis
+library(shiny)
+library(shinythemes)
 
 
 
-
-ui <- navbarPage(theme = "Theme.css","Vibriocidal Standardization with a Monoclonal Antibody",
+ui <- navbarPage(theme = shinytheme("lumen"),
+  "Vibriocidal Standardization with a Monoclonal Antibody",
                  
                  tabPanel("Application", div(img(src = "mgh1811.png", height = 200, width = 200), style="text-align: right;"),
                           
@@ -22,16 +24,14 @@ ui <- navbarPage(theme = "Theme.css","Vibriocidal Standardization with a Monoclo
                           uiOutput('monoclonalUI'), br(),
                           uiOutput('buttonsUI'), br(),
                           uiOutput('downloadUI'), br()
-                          
-                          
-                          
+                        
+                     
                  ),
                  
                  tabPanel("Instructions for First Time Use",
                           div(img(src = "VBC1.png", height = 1000, width = 880), style="text-align: left; margin-top: -5em"),
                           div(img(src = "VBC2.png", height = 1000, width = 880), style="text-align: left; margin-top: -13em"),
                           div(img(src = "Plate.png", height = 300, width = 800), style="text-align: left; margin-top: -18em; margin-bottom: 2em"))
-                 
 )
 
 server = shinyServer(function(input, output) {
@@ -62,9 +62,9 @@ server = shinyServer(function(input, output) {
       div(
         
         
-        actionButton('Interpolate','Interpolate', style="text-align: left; margin-top: 0em")
+        actionButton('Interpolate','Interpolate', style="text-align: left; margin-top: 0em"), style="color: #FF0000")
         
-      )
+      
   })
   
   
