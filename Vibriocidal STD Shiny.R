@@ -53,10 +53,9 @@ server = shinyServer(function(input, output) {
   output$monoclonalUI <- renderUI({
     if (controlVar$fileReady)
       div(
-        numericInput('monoclonal', "Input your starting monoclonal antibody concentration in ng/mL. Default is 2500 ng/mL.", 2500), style="text-align: left; margin-top: -6em")
+      numericInput('monoclonal', "Input your starting monoclonal antibody concentration in ng/mL. Default is 2500 ng/mL.", 2500), style="text-align: left; margin-top: -6em")
     
   })
-  
   output$buttonsUI <- renderUI({
     if (controlVar$monoclonalReady && controlVar$fileReady)
       div(
@@ -64,9 +63,7 @@ server = shinyServer(function(input, output) {
         
         actionButton('Interpolate','Interpolate', style="text-align: left; margin-top: 0em"), style="color: #FF0000")
         
-      
   })
-  
   
   output$downloadUI <- renderUI({
     if (controlVar$interpReady && controlVar$monoclonalReady && controlVar$fileReady)
@@ -188,11 +185,11 @@ server = shinyServer(function(input, output) {
     STD_VB_TITER_P1S2 <- log2(10^ADJ_VB_Titer_P1S2$x) + log2(10^ADJ_mAb_P1$x)
     STD_VB_TITER_P1S3 <- log2(10^ADJ_VB_Titer_P1S3$x) + log2(10^ADJ_mAb_P1$x)
     
-    dat <<- matrix(data = (c(STD_VB_TITER_P1S1, STD_VB_TITER_P1S2, STD_VB_TITER_P1S3)), nrow = 1, ncol = 3, byrow=T)
+    dat <<- matrix(data = (c(STD_VB_TITER_P1S1, STD_VB_TITER_P1S2, STD_VB_TITER_P1S3)), nrow = length(input$file1[1]), ncol = 3, byrow=T, 
+   dimnames = list(paste0(input$file1[1]), c("Sample 1", "Sample 2", "Sample 3"))) 
     
-    
-    rownames(dat, prefix = paste0(input$file1))
-    colnames(dat) <- c("Sample 1", "Sample 2", "Sample 3")
+
+   
     
     controlVar$interpReady <- TRUE  
     
