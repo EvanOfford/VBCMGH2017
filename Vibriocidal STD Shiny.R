@@ -75,8 +75,8 @@ server = shinyServer(function(input, output) {
   
   observeEvent(input$monoclonal, {
     controlVar$monoclonalReady <- FALSE
-    
-    a <- (as.integer(input$monoclonal))/2
+    S <- as.integer(input$monoclonal)
+    a <- S/2
     b <- a/2
     c <- b/2
     d <- c/2
